@@ -4,6 +4,7 @@ SIEM are important Security Tools. SIEM systems aggregate security events in a s
 As Systems Complexity Increases SIEM tools become a more critical central component of Secure Systems. 
 
 However we feel currently state of Open Source and SIEM markets lacks of Proper Modern Open Source SIEM tool. Commercial SIEM tools are expensive and out of reach for a lot of Organizations.
+Splunk and other Commercial Tools, but Specially Splunk are so expensive the World is a more insecure place as a result.
 
 Some of the items that we idenfity as problems with most current Open Source SIEM. Most SIEM Like Solutions are centralized Log Collectors with Dashboards and Stored Search. Most of them currently operate on the following way:
 
