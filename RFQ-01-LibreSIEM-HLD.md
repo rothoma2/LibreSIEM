@@ -24,7 +24,7 @@ graph LR;
     ThreatFeeds[ThreatFeeds] --> B["IOC Enreacher"]
     EventProcessor[Event PreProcessor] --> MLAnomaly["ML Anomaly"]
     EventProcessor --> B
-    B --> Z["Log Collector (Graylog)"] --> C(Index)
+    B --> Z["Log Collector (ELK)"] --> C(Index)
     C --> D[Hot Log Storage]
     C --> E[Cold Log Storage]
     MLAnomaly --> Z
@@ -46,7 +46,7 @@ Additional context will be enreach to the event such as (ASN for Public IPS, ASN
 
 - LLM Explainer. LLMs are very good with Text and content. The LLM explainer takes a series of Related Events, belonging to the Same Detection and generated a Explainable Hyphothesis as to the Kill Chain, that will be able to be shared and understood by the Analyst.
 
-- Log Collector (Graylog) Is the core of the System. Here it collects Security Events as Log lines of text, with tokenized inpus to make posible efficient search.
+- Log Collector (ELK) Is the core of the System. Here it collects Security Events as Log lines of text, with tokenized inpus to make posible efficient search.
 
 - Index. Lucene Index to allow for fast queries of Terms into log storage. Abstracted by Graylog.
 
@@ -57,4 +57,4 @@ Additional context will be enreach to the event such as (ASN for Public IPS, ASN
 - Response Playbooks. Integrations Hooks (Webhooks and local scripts, and ansible tasks) can be triggered to kick off Auto Response, Auto Heal Mechanism for Certain types of Detected and Generated Security Incidents workflows. Depending on the Confidence Level this might be Manual Triggered, Semi Automatic or Fully Automatic operated.
 
 - # Event Progression Stages.
-- 
+
